@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Brainee2</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Simple Riddle Game</h1>
+        <h2>Find the thief</h2>
+        <p>Dave was having lunch in a cafe.He went to the bathroom and forgot his wallet on the table.When he came back,he saw that the wallet was still there,but there was no money in it.<br>Dave called the police and the policeman arrived and asked,<i>"What happened exactly?"</i> and Dave said that,<i>"Somebody has stolen money from my wallet while I was in the bathroom"</i>.The policeman checked the CCTV footage immediately and he saw three people(Alice the waiter, Sarah the cleaner and Stan the visitor) around the table. He questioned them individually,Alice said,<i>"I just came to grab the empty glass and I didnt touch the wallet"</i>, Sarah said,<i>"I wiped the floor under the table and I left"</i> and Stan said,<i>"I just passed by"</i>.The policeman pulled the fingerprints from the wallet and there were only dave's fingerprints on it.<br>
+            <hr>
+        <span>So Who is the Thief?</span></p>
+        <input type="text" autocomplete="off"><br>
+        <button id="btnchk" class="btn btn-success btn1">Check</button>
+        <button id="btntry" class="btn btn-danger btn2">Try again</button>
+        <button class="btn float-right btn3">Hint ?</button>
+    </div>
+    <script>
+        var btn1=document.querySelector('.btn1');
+        var btn2=document.querySelector('.btn2');
+        var btn3=document.querySelector('.btn3');
+        var input=document.querySelector('input')
+        btn1.addEventListener('click',()=>{
+            if(input.value==="sarah"){
+                alert("Correct Guess,Well Done!!")
+                input.value="";
+            }
+            else{
+                alert("Wrong,Try again")
+                input.value="";
+            }
+        })
+        btn2.addEventListener('click',()=>{
+            input.value="";
+        })
+        btn3.addEventListener('click',()=>{
+            alert("Alica and Stan was so afraid.Sarah wears gloves and has a mob");
+        })
+    </script>
+</body>
+</html>
